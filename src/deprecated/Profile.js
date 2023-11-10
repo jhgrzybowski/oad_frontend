@@ -2,12 +2,15 @@ import { useState } from "react";
 import ProfileContent from "./ProfileContent";
 import ProfileName from "./ProfileName";
 import ProfilePicture from "./ProfilePicture";
-import useFetch from "./useFetch";
+import useFetch from "../hooks/useFetch";
 
 const Profile = () => {
 
     const[userId, setUserId] = useState(null);
-    const{data, isLoading, error} = useFetch('http://localhost:8000/profiles/' + userId);
+    const{data, isLoading, error} = useFetch('http://localhost:8000/profiles' + userId);
+
+    const[username, setUsername] = useState('');
+    const{ userData, searchError } = useSearch('http://localhost:8000/profiles?username' + userId)
     
     const handleUserId = (event) => {
         event.preventDefault();

@@ -1,0 +1,25 @@
+.users-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-evenly;
+  justify-content: center;
+}
+
+.user-container {
+  padding: 2rem;
+  margin: 2rem;
+  width: 30rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  color: white;
+  background-color: #2c1131;
+  transition: box-shadow .3s;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.user-container:hover {
+  background-color: #3c1742;
+  box-shadow: 0 0 2rem rgba(226, 209, 209, 0.2);
+}

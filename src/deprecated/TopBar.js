@@ -1,11 +1,11 @@
 import Profile from "./Profile";
 
 const TopBar = () => {
-    return (
+  return (
     <div className="top-bar">
-        <Profile />
+      <Profile />
     </div>
-    );
-}
- 
+  );
+};
+
 export default TopBar;

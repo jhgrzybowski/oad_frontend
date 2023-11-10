@@ -1,11 +1,16 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import OadApp from './OadApp';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import "./index.css";
+
+import apolloClient from "./utils/apolloClient";
+import { ApolloProvider } from "@apollo/client";
+
+import OadApp from "./pages/OadApp";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <ApolloProvider client={apolloClient}>
     <OadApp />
-  </React.StrictMode>
+  </ApolloProvider>
 );
