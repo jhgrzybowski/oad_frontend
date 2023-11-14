@@ -6,6 +6,7 @@ const GET_USER_PROFILE = gql`
       id
       username
       avatar
+      activities
       weights {
         weight
         label

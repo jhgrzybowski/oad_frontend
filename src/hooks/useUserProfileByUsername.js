@@ -6,6 +6,7 @@ query GetUserProfile($username: String!) {
       id
       username
       avatar
+      activities
       weights {
         weight
         label
@@ -13,6 +14,12 @@ query GetUserProfile($username: String!) {
       matches {
         id
         username
+        avatar
+        activities
+        weights {
+          weight
+          label
+        }
       }
     }
   }

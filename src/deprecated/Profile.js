@@ -9,8 +9,8 @@ const Profile = () => {
     const[userId, setUserId] = useState(null);
     const{data, isLoading, error} = useFetch('http://localhost:8000/profiles' + userId);
 
-    const[username, setUsername] = useState('');
-    const{ userData, searchError } = useSearch('http://localhost:8000/profiles?username' + userId)
+    // const[username, setUsername] = useState('');
+    // const{ userData, searchError } = useSearch('http://localhost:8000/profiles?username' + userId)
     
     const handleUserId = (event) => {
         event.preventDefault();

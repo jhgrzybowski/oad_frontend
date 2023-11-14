@@ -1,30 +1,36 @@
 import { useState, useEffect } from "react";
 
-const useFetch = (endpoint) => {
+const useFetch = (endpoint, headers) => {
   const [data, setData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [loading, setloading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(endpoint)
+    fetch(endpoint, {
+      headers: headers,
+    })
       .then((res) => {
         if (!res.ok) {
           throw Error("Błąd ładowania danych z serwera");
         }
-        return res.json();
+        //console.log("Result: ", res.text());
+        return res.blob();
       })
       .then((data) => {
-        setData(data);
-        setIsLoading(false);
+        const objectURL = URL.createObjectURL(data);
+        setData(objectURL);
+        setloading(false);
         setError(null);
       })
       .catch((err) => {
-        setIsLoading(false);
+        setloading(false);
         setError(err.message);
       });
   }, [endpoint]);
 
-  return { data, isLoading, error };
+  console.log("Data flow: ", { data, loading, error });
+
+  return { data, loading, error };
 };
 
 export default useFetch;

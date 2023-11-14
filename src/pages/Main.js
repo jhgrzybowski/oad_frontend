@@ -9,7 +9,7 @@ const Main = () => {
     <div className="main">
       {loading && <div className="loading-page"></div>}
       {error && <div className="error-page">Błąd wczytywania danych z serwera</div>}
-      {data && <UserList users={data.users.slice(239,256)} />}
+      {data && <UserList users={data.users} />}
     </div>
   );
 };

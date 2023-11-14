@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useUserProfileById } from "../hooks/useUserProfileById";
+import UserContent from "./UserContent";
+import Activity from "./Activity";
 import "../styles/loader.css";
 import "../styles/user-profile.css";
 
@@ -10,25 +12,15 @@ const UserProfile = () => {
   return (
     <div className="main">
       {loading && <div className="loading-page"></div>}
-      <div className="user-profile">
-        {data && data.userById.avatar && (
-          <img src={data.userById.avatar} className="user-avatar" />
-        )}
-        {data && <h2> {data.userById.username} </h2>}
-        {data && (
-          <div className="user-labels">
-            {data.userById.weights
-              .filter((weight) => {
-                return weight.weight >= 1 ? weight.weight : null;
-              })
-              .map((weight) => (
-                <span className="label" key={weight.label}>
-                  {weight.label}
-                </span>
-              ))}
-          </div>
-        )}
-      </div>
+      {error && !data && (
+        <div className="error-page">Błąd wczytywania danych z serwera</div>
+      )}
+      {data && !error &&  <UserContent data={data.userById} />}
+      {data && <div className="user-activities">
+        {data.userById.activities.map((activity) => (
+          <Activity key={activity} activityURL={activity} />
+        ))}
+      </div>}
     </div>
   );
 };
