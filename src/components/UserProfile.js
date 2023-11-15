@@ -4,6 +4,7 @@ import UserContent from "./UserContent";
 import Activity from "./Activity";
 import "../styles/loader.css";
 import "../styles/user-profile.css";
+// import "../styles/slide.scss"
 
 const UserProfile = () => {
   const { id } = useParams();
@@ -15,12 +16,15 @@ const UserProfile = () => {
       {error && !data && (
         <div className="error-page">Błąd wczytywania danych z serwera</div>
       )}
-      {data && !error &&  <UserContent data={data.userById} />}
-      {data && <div className="user-activities">
-        {data.userById.activities.map((activity) => (
-          <Activity key={activity} activityURL={activity} />
-        ))}
-      </div>}
+      {data && !error && <UserContent data={data.userById} />}
+      {data && !loading && (
+        <div className="user-activities">
+          <h2 className="activities-banner">My activities</h2>
+          {data.userById.activities.map((activity) => (
+            <Activity key={activity} activityURL={activity} />
+          ))}
+        </div>
+      )}
     </div>
   );
 };

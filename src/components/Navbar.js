@@ -6,7 +6,7 @@ import logo from "../logo.svg";
 import LoginButton from "./LoginButton";
 import MeButton from "./MeButton";
 
-const Nav = () => {
+const Navbar = () => {
   const { keycloak, initialized } = useKeycloak();
 
   return (
@@ -17,10 +17,13 @@ const Nav = () => {
       <Link to="/users" className="navbar-button">
         ALL USERS
       </Link>
+      <Link to="/matches" className="navbar-button">
+      MY MATCHES
+      </Link>
       {keycloak.authenticated && <MeButton />}
       {!keycloak.authenticated && <LoginButton />}
     </div>
   );
 };
 
-export default Nav;
+export default Navbar;

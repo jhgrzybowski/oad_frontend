@@ -14,15 +14,19 @@ const Activity = ({ activityURL }) => {
   );
 
   return (
-    <div>
-      {loading && <div className="loading-page"></div>}
-      {error && !data && (
-        <div className="error-page">Błąd ładowania danych z serwera</div>
+    <span>
+      {data && !error && !loading && (
+        <div className="activity">
+          {loading && <div className="loading-page"></div>}
+          {error && !data && (
+            <div className="error-page">Błąd ładowania danych z serwera</div>
+          )}
+          {data && !error && !loading && (
+            <img src={data} className="activity-image" />
+          )}
+        </div>
       )}
-      {data && !error && (
-        <img src={data} alt="" width="300px" className="activity-image" />
-      )}
-    </div>
+    </span>
   );
 };
 

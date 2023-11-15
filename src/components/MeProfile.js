@@ -18,40 +18,16 @@ const MeProfile = () => {
         <div className="error-page">Błąd wczytywania danych z serwera</div>
       )}
 
-      {data && <UserContent data={data.userByUsername}/>}
+      {data && <UserContent data={data.userByUsername} />}
 
-      {data && <div className="user-activities">
-        {data.userByUsername.activities.map((activity) => (
-          <Activity key={activity} activityURL={activity} />
-        ))}
-      </div>}
-
-      {/* {data && (
-        <div className="user-profile">
-          {data && data.userByUsername.avatar && (
-            <img src={data.userByUsername.avatar} className="user-avatar" />
-          )}
-          {data && <h2> {data.userByUsername.username} </h2>}
-          {data && (
-            <div className="user-labels">
-              {data.userByUsername.weights
-                .filter((weight) => {
-                  return weight.weight >= 1 ? weight.weight : null;
-                })
-                .map((weight) => (
-                  <p className="label" key={weight.label}>
-                    {weight.label}
-                  </p>
-                ))}
-            </div>
-          )}
-          <div className="user-activities">
-            {data.userByUsername.activities.map((activity) => (
-              <Activity key={activity} activityURL={activity} />
-            ))}
-          </div>
+      {data && !loading && (
+        <div className="user-activities">
+          <h2 className="activities-banner">My activities</h2>
+          {data.userByUsername.activities.map((activity) => (
+            <Activity key={activity} activityURL={activity} />
+          ))}
         </div>
-      )} */}
+      )}
     </div>
   );
 };
