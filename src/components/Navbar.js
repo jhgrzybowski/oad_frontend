@@ -2,7 +2,7 @@ import React from "react";
 import { useKeycloak } from "@react-keycloak/web";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
-import logo from "../logo.svg";
+import logo from "../assets/logo.svg";
 import LoginButton from "./LoginButton";
 import MeButton from "./MeButton";
 
