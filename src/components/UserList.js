@@ -11,10 +11,12 @@ const UserList = ({ users }) => {
     Authorization: `Bearer ${keycloak.token}`,
   };
 
+  
   const { data: avatarData, loading: avatarLoading, error: avatarError } = useFetch(
     users?.user?.avatar?.replace("8081", "8088") ?? noProfilePic,
     header
   );
+
 
   return (
     <div className="users-list">

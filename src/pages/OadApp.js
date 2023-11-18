@@ -7,7 +7,7 @@ import WelcomePage from "./WelcomePage";
 import PrivateRoute from "../components/PrivateRoute";
 import Main from "./Main";
 import UserProfile from "../components/UserProfile";
-import MeProfile from "../components/MeProfile"
+import MeProfile from "../components/MeProfile";
 import MyMatches from "../components/MyMatches";
 
 function OadApp() {
@@ -16,13 +16,15 @@ function OadApp() {
       <ReactKeycloakProvider authClient={keycloak}>
         <BrowserRouter>
           <Navbar />
+          <Routes>
+            <Route path="/" element={<WelcomePage />} />
+          </Routes>
           <PrivateRoute>
             <Routes>
-              <Route path="/" element={<WelcomePage />} />
               <Route path="/users" element={<Main />} />
               <Route path="/users/:id" element={<UserProfile />} />
-              <Route path="/me" element={<MeProfile/>} />
-              <Route path="/matches" element={<MyMatches/>} />
+              <Route path="/me" element={<MeProfile />} />
+              <Route path="/matches" element={<MyMatches />} />
             </Routes>
           </PrivateRoute>
         </BrowserRouter>

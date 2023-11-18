@@ -28,7 +28,7 @@ const useFetch = (endpoint, headers) => {
       });
   }, [endpoint]);
 
-  console.log("Data flow: ", { data, loading, error });
+  // console.log("Data flow: ", { data, loading, error });
 
   return { data, loading, error };
 };

@@ -21,7 +21,7 @@ const MyMatches = () => {
       users.push(match);
     });
 
-  console.log(users);
+//   console.log(users);
 
   const {
     data: avatarData,
