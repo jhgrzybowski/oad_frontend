@@ -13,7 +13,6 @@ const useFetch = (endpoint, headers) => {
         if (!res.ok) {
           throw Error("Błąd ładowania danych z serwera");
         }
-        //console.log("Result: ", res.text());
         return res.blob();
       })
       .then((data) => {
@@ -29,6 +28,9 @@ const useFetch = (endpoint, headers) => {
   }, [endpoint]);
 
   // console.log("Data flow: ", { data, loading, error });
+
+
+  
 
   return { data, loading, error };
 };

@@ -20,6 +20,9 @@ const Navbar = () => {
       <Link to="/matches" className="navbar-button">
       MY MATCHES
       </Link>
+      <Link to="/chats" className="navbar-button">
+        MY CHATS
+      </Link>
       {keycloak.authenticated && <MeButton />}
       {!keycloak.authenticated && <LoginButton />}
     </div>

@@ -1,0 +1,12 @@
+version: "3"
+services:
+  oad_frontend:
+    build: ./frontend
+    container_name: oad_frontend_c
+    ports:
+      - '3000:3000'
+    # volumes:
+    #   - ./src:/app
+    #   - ./app/node_modules
+    stdin_open: true
+    tty: true

@@ -15,8 +15,9 @@ const UserContent = ({ data }) => {
 
   return (
     <div className="user-profile">
+      {avatarLoading && <img src={noProfilePic} className="user-avatar" />}
       {avatarData && !avatarError && <img src={avatarData} className="user-avatar" />}
-      <h2 className="username"> {data.username} </h2>
+      <h2 className="username"> {data.firstName } {data.lastName } </h2>
       <div className="user-labels">
         {data.weights
           .filter((weight) => {

@@ -9,6 +9,7 @@ import Main from "./Main";
 import UserProfile from "../components/UserProfile";
 import MeProfile from "../components/MeProfile";
 import MyMatches from "../components/MyMatches";
+import MyChats from "../components/MyChats";
 
 function OadApp() {
   return (
@@ -25,6 +26,7 @@ function OadApp() {
               <Route path="/users/:id" element={<UserProfile />} />
               <Route path="/me" element={<MeProfile />} />
               <Route path="/matches" element={<MyMatches />} />
+              <Route path="/chats" element={<MyChats />} />
             </Routes>
           </PrivateRoute>
         </BrowserRouter>

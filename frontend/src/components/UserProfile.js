@@ -4,7 +4,6 @@ import UserContent from "./UserContent";
 import Activity from "./Activity";
 import "../styles/loader.css";
 import "../styles/user-profile.css";
-// import "../styles/slide.scss"
 
 const UserProfile = () => {
   const { id } = useParams();
