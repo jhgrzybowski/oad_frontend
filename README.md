@@ -15,12 +15,12 @@ Aplikacja została szczegółowo opisana w pracy dyplomowej:
 **_Społecznościowa aplikacja internetowa bazująca na algorytmie BeReal_**  
 Plik: `Once_a_Day_PRACA_DYPLOMOWA.pdf`
 
-> Jeśli chcesz dowiedzieć się więcej o idei aplikacji, zastosowanych algorytmach, architekturze mikroserwisów czy podejściu do cyfrowego dobrostanu – zapoznaj się z tą pracą 📄.
+> Po więcej szczegółów odnośnie idei aplikacji, zastosowanych technikach łączenia użytkowników czy podejściu do cyfrowego dobrostanu – zachęcam do zapoznania się z pracą 📄.
 
 ## 🛠️ Technologie
 
 - **Frontend:** React.js
-- **Backend:** Java + Spring Boot (architektura mikroserwisowa)
+- **Backend:** Java + Spring Boot (architektura mikrousługowa)
 - **Baza danych:** PostgreSQL
 - **Bezpieczeństwo:** OAuth 2.0, OpenID Connect
 - **Wymiana danych:** REST API, GraphQL, WebSocket
@@ -33,8 +33,8 @@ Kod backendu aplikacji znajduje się w repozytorium:
 
 ## 🚀 Uruchomienie
 
-Wkrótce zostanie udostępniony kompletny przewodnik po uruchomieniu aplikacji lokalnie.
+TBD
 
 ---
 
-> Aplikacja powstała w ramach projektu inżynierskiego na kierunku Informatyka, profil Teleinformatyka, Politechnika Poznańska.
+> Aplikacja powstała w ramach projektu inżynierskiego na kierunku Informatyka, Katedra Architektury Systemów Komputerowych, Politechnika Gdańska.
