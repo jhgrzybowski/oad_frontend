@@ -2,13 +2,18 @@
 
 **Once a Day** to społecznościowa aplikacja webowa, która łączy użytkowników na podstawie ich aktywności i zainteresowań – raz dziennie. Projekt powstał jako odpowiedź na rosnący problem uzależnienia od mediów społecznościowych oraz potrzebę budowania autentycznych relacji online. Jej fundamentem jest idea cyfrowego dobrostanu oraz inspirowany aplikacją **BeReal** mechanizm ograniczonych publikacji.
 
+![image](https://github.com/user-attachments/assets/39133bbb-8133-4ec2-af51-e37ac1b371cc)
+
+
+
 ## ✨ Główne cechy
 
 - 📸 **Jedna aktywność dziennie** – użytkownik może raz dziennie udostępnić zdjęcie lub inną aktywność, która znika następnego dnia.
 - 🔗 **Inteligentne połączenia** – aplikacja dobiera użytkowników do siebie na podstawie aktywności i zainteresowań przy pomocy specjalnie opracowanych algorytmów (m.in. odległość cosinusowa, sortowanie preferencyjne).
 - 💬 **Ograniczone interakcje** – każdego dnia pojawia się tylko kilka nowych połączeń, co wspiera głębsze i bardziej autentyczne rozmowy.
 - 📱 **Nowoczesny interfejs** – frontend stworzony w React z pełną integracją z backendem opartym na mikroserwisach (Java Spring Boot).
-
+  
+![image](https://github.com/user-attachments/assets/e2d46ff5-b27f-4c1d-bb67-8c529a0141c2)
 ## 📚 Praca dyplomowa
 
 Aplikacja została szczegółowo opisana w pracy dyplomowej:  
